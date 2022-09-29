@@ -40,6 +40,7 @@ const Board = () => {
                  if(message==='Woo Hoo Player1 is The Winner'){
                     setTimeout(()=>{
                         setMarks([0,0,0,0,0,0,0,0,0])
+                        setMessage('')
                     },3000)
                  }
             }
@@ -48,7 +49,8 @@ const Board = () => {
                 if(message==='Woo Hoo Player2 is The Winner'){
                     setTimeout(()=>{
                         setMarks([0,0,0,0,0,0,0,0,0])
-                    },3000)
+                        setMessage('')
+                    },5000)
                  }  
            }
         }
