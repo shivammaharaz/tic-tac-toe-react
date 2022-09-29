@@ -5,4 +5,5 @@
   /* align-items: center; */
 justify-content: center;
 background-color: #f08282;
+overflow: hidden;
 }
