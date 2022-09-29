@@ -22,7 +22,7 @@
 
 .board {
     width: auto;
-    height: auto;
+    height: 440px;
     background: rgb(65, 31, 88);
     background: linear-gradient(90deg, rgba(65, 31, 88, 1) 0%, rgba(240, 130, 130, 1) 50%, rgba(142, 130, 113, 1) 100%);
     box-sizing: border-box;

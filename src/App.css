@@ -2,8 +2,8 @@
   width: 100%;
   height: 100vh;
   display: flex;
-  /* align-items: center; */
-justify-content: center;
-background-color: #f08282;
+  align-items: center;
+ justify-content: center;
+ background-color: #f08282;
 overflow: hidden;
 }
