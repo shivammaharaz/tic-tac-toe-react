@@ -1,0 +1,42 @@
+.block {
+    width: 105px;
+    height: 105px;
+    /* background: darksalmon; */
+    background-size: cover;
+    border: 5px solid black;
+    display: inline-block;
+}
+
+.mark1 {
+    background-image: url('./image/round.png');
+    background-size: cover;
+
+}
+
+.mark2 {
+    background-image: url('./image/cross.png');
+    background-size: cover;
+
+
+}
+
+.board {
+    width: auto;
+    height: auto;
+    background: rgb(65, 31, 88);
+    background: linear-gradient(90deg, rgba(65, 31, 88, 1) 0%, rgba(240, 130, 130, 1) 50%, rgba(142, 130, 113, 1) 100%);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 1px 1px 30px 7px black;
+}
+
+.r1,
+.r2,
+.r3 {
+    display: flex;
+}
