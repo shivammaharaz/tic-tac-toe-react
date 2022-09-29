@@ -6,6 +6,10 @@ const Board = () => {
     const [marks,setMarks] =useState([0,0,0,0,0,0,0,0,0])
     const [player,setPlayer]=useState(1)
     const [message,setMessage]=useState('')
+    const [p1,setp1]=useState('')
+    const [p2,setp2]=useState('')
+
+
 
     const changeMark=(i)=>{
         const m=[...marks]
@@ -20,6 +24,13 @@ const Board = () => {
         }
        
     }
+  useEffect(()=>{
+    setp1(prompt('Enter player 1 name'))
+    setp2(prompt('Enter player 2 name'))
+  },[])
+
+    
+    
     // let data
 
     useEffect(()=>{
@@ -33,28 +44,32 @@ const Board = () => {
             [0,4,8],
             [2,4,6]
         ]
+        
+        
 
         for (const c of combinations) {
             if (marks[c[0]]===1 &&marks[c[1]]===1 &&marks[c[2]]===1  ) {
-                 setMessage('Woo Hoo Player1 is The Winner')
-                 if(message==='Woo Hoo Player1 is The Winner'){
+                 setMessage(`Woo Hoo ${p1}  is The Winner`)
+                 if(message===`Woo Hoo ${p1}  is The Winner`){
                     setTimeout(()=>{
                         setMarks([0,0,0,0,0,0,0,0,0])
                         setMessage('')
                     },3000)
                  }
+
             }
             else if (marks[c[0]]===2 &&marks[c[1]]===2 &&marks[c[2]]===2  ) {
-                setMessage('Woo Hoo Player2 is The Winner')
-                if(message==='Woo Hoo Player2 is The Winner'){
+                setMessage(`Woo Hoo ${p2}  is The Winner`)
+                if(message===`Woo Hoo ${p2}  is The Winner`){
                     setTimeout(()=>{
                         setMarks([0,0,0,0,0,0,0,0,0])
                         setMessage('')
                     },5000)
                  }  
            }
+       
         }
-    },[message,marks])
+    },[message, marks, p1, p2])
     
   return (
     <div className="board">
@@ -74,7 +89,7 @@ const Board = () => {
         <Block mark={marks[8]}  position={8} changeMark={changeMark}/>
         </div>
 
-        <h4>{message}</h4>
+        <h4 style={{textTransform:"capitalize"}}>{message}</h4>
 
     </div>
   )
